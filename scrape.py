@@ -22,7 +22,7 @@ def stripHTML(text):
         return text
 
 def extract(page):
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'}
+    headers = {'User-Agent': Your Agent}
     url = f"https://www.indeed.com/jobs?q=python+developer&l=Philadelphia,+PA&start={page}"
     r = requests.get(url, headers)
     soup = BeautifulSoup(r.content, 'html.parser')
